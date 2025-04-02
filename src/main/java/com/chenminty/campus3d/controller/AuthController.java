@@ -29,7 +29,7 @@ public class AuthController {
     }
 
     @GetMapping("/test")
-    public String test() {
-        return "Hello World";
+    public Response<?> test() {
+        return Response.success("如果能看到这条信息，说明通过了JWT验证");
     }
 }

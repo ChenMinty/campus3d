@@ -38,6 +38,7 @@ public class JwtUtils {
     public boolean validateToken(String token) {
         try {
             Jwts.parserBuilder().setSigningKey(secretKey).build().parseClaimsJws(token);
+            System.out.println("验证通过");
             return true;
         } catch (SignatureException ex) {
             // 签名无效

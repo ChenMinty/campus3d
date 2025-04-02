@@ -67,6 +67,7 @@ public class UserService {
 
         // 5. 返回响应
         LoginResponse response = new LoginResponse();
+        response.setUserId(user.getUserId());
         response.setToken(token);
         response.setUsername(user.getUsername());
         return response;
